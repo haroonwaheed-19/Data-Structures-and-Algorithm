@@ -1,6 +1,12 @@
 #include <iostream>
 using namespace std;
-
+void print(int *arr, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
 bool linearSearch(int *arr, int size, int key)
 {
     if (size == 0)
@@ -22,6 +28,7 @@ int main()
     int key = 1;
     int arr[size] = {13, 2, 15, 1, 6, 10};
     int ans = linearSearch(arr, size, key);
+    print(arr, size);
     if (ans)
     {
         cout << "\n"

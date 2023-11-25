@@ -1,5 +1,12 @@
 #include <iostream>
 using namespace std;
+void print(int *arr, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
 bool isSortedAscending(int *arr1, int size)
 {
     // base case
@@ -43,6 +50,8 @@ int main()
     int arr2[size] = {19, 15, 12, 10, 8, 6};
     bool ans = isSortedAscending(arr1, size);
     bool ans1 = isSortedDescending(arr2, size);
+    cout << "\n\t\tArray 1" << endl;
+    print(arr1, size);
     if (ans)
     {
         cout << "\nArray 1 is Sorted in Ascending Order" << endl;
@@ -51,6 +60,8 @@ int main()
     {
         cout << "\nArray 1 is not Sorted in Ascending Order" << endl;
     }
+    cout << "\n\t\tArray 2" << endl;
+    print(arr2, size);
     if (ans1)
     {
         cout << "\nArray 2  is Sorted in Descending Order" << endl;

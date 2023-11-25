@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-bool isPresent(int *arr, int size, int key)
+bool linearSearch(int *arr, int size, int key)
 {
     if (size == 0)
     {
@@ -13,7 +13,7 @@ bool isPresent(int *arr, int size, int key)
     }
     else
     {
-        return isPresent(arr + 1, size - 1, key);
+        return linearSearch(arr + 1, size - 1, key);
     }
 }
 int main()
@@ -21,7 +21,7 @@ int main()
     int size = 6;
     int key = 1;
     int arr[size] = {13, 2, 15, 1, 6, 10};
-    int ans = isPresent(arr, size, key);
+    int ans = linearSearch(arr, size, key);
     if (ans)
     {
         cout << "\n"

@@ -20,6 +20,6 @@ int main()
     cout << "\nEnter exponent : ";
     cin >> exp;
     int ans = power(base, exp);
-    cout << "\nPower of " << base << " to power " << exp << " is : " << ans << endl;
+    cout << "\nAnswer of " << base << " to power " << exp << " is : " << ans << endl;
     return 0;
 }

@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-bool isSorted(int *arr, int size)
+bool isSortedAscending(int *arr1, int size)
 {
     // base case
     if (size == 0 || size == 1) // if there is no element or 1 in the array they are sorted
@@ -8,38 +8,56 @@ bool isSorted(int *arr, int size)
         return true;
     }
 
-    if (arr[0] > arr[1])
+    if (arr1[0] > arr1[1])
     {
         return false;
     }
     else
     {
         // recursive call
-        return isSorted(arr + 1, size - 1);
+        return isSortedAscending(arr1 + 1, size - 1);
+    }
+}
+bool isSortedDescending(int *arr2, int size)
+{
+    // base case
+    if (size == 0 || size == 1) // if there is no element or 1 in the array they are sorted
+    {
+        return true;
+    }
+
+    if (arr2[0] < arr2[1])
+    {
+        return true;
+    }
+    else
+    {
+        // recursive call
+        return isSortedDescending(arr2 + 1, size - 1);
     }
 }
 int main()
 {
     int size = 6;
     int arr1[size] = {2, 4, 5, 8, 19, 19};
-    int arr2[size] = {2, 4, 0, 8, 29, 19};
-    bool ans = isSorted(arr1, size);
-    bool ans1 = isSorted(arr2, size);
+    int arr2[size] = {19, 15, 12, 10, 8, 6};
+    bool ans = isSortedAscending(arr1, size);
+    bool ans1 = isSortedDescending(arr2, size);
     if (ans)
     {
-        cout << "\nArray 1 is Sorted" << endl;
+        cout << "\nArray 1 is Sorted in Ascending Order" << endl;
     }
     else
     {
-        cout << "\nArray 1 is not Sorted" << endl;
+        cout << "\nArray 1 is not Sorted in Ascending Order" << endl;
     }
     if (ans1)
     {
-        cout << "\nArray 2  is Sorted" << endl;
+        cout << "\nArray 2  is Sorted in Descending Order" << endl;
     }
     else
     {
-        cout << "\nArray 2 is not Sorted" << endl;
+        cout << "\nArray 2 is not Sorted in Descending Order" << endl;
     }
     return 0;
 }

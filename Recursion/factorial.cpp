@@ -14,8 +14,10 @@ int fact(int n)
 }
 int main()
 {
-    int n = 4;
+    int n;
+    cout << "\nEnter a number for which you want to find a factorial : ";
+    cin >> n;
     int ans = fact(n);
-    cout << ans << endl;
+    cout << "\nFactorial of " << n << " is : " << ans << endl;
     return 0;
 }

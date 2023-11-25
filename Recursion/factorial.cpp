@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+// factorial function
+int fact(int n)
+{
+    // base case
+    if (n == 0)
+    {
+        return 1;
+    }
+
+    return n * fact(n - 1);
+}
+int main()
+{
+    int n = 4;
+    int ans = fact(n);
+    cout << ans << endl;
+    return 0;
+}

@@ -2,7 +2,7 @@
 using namespace std;
 void print(int *arr, int n)
 {
-    cout << "\nElements in the array are : ";
+    cout << "\n\t\tElements in the array are : ";
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
@@ -44,7 +44,7 @@ int main()
     }
     else
     {
-        cout << "\n\tKey " << key << " present at index : " << check << endl;
+        cout << "\n\t\tKey " << key << " present at index : " << check << endl;
     }
     return 0;
 }

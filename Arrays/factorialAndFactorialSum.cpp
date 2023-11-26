@@ -26,7 +26,7 @@ int main()
 {
     int n = 5;
     int ans = factorial(n);
-    cout << "\nFactorial is " << ans << endl; // 120
+    cout << "\n\tFactorial is " << ans << endl; // 120
     int sum = sumOfFactorial(n);
     cout << "\nSum of Factorial from " << n << " to 1 is " << sum << endl; // 153
     return 0;

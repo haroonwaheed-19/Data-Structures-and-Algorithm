@@ -4,11 +4,12 @@ const int n = 3;
 void displayArray(int arr[][n], int n)
 {
     cout << "\n\t\tElements in the array" << endl;
+    cout << endl;
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            cout << arr[i][j] << " ";
+            cout << "\t" << arr[i][j] << " ";
         }
         cout << endl;
     }
@@ -30,7 +31,7 @@ int main()
     int trans[n][n] = {0};
     displayArray(arr, n);
     transpose(trans, arr, n);
-    cout << "\nAfter transposing ";
+    cout << "\n\tAfter transposing " << endl;
     displayArray(trans, n);
     return 0;
 }

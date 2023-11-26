@@ -8,7 +8,7 @@ void displayArray(int arr[][n], int n)
     {
         for (int j = 0; j < n; j++)
         {
-            cout << arr[i][j] << " ";
+            cout << "\t" << arr[i][j] << " ";
         }
         cout << endl;
     }
@@ -38,7 +38,7 @@ int main()
     int arr[n][n] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     displayArray(arr, n);
     sumAndProduct(arr, n, sum, prod);
-    cout << "\nSum of Diagonal values " << sum << endl;
-    cout << "\nproduct of Diagonal values " << prod << endl;
+    cout << "\n\tSum of Diagonal values " << sum << endl;
+    cout << "\n\tproduct of Diagonal values " << prod << endl;
     return 0;
 }

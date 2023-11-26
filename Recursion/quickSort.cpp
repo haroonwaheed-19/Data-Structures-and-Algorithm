@@ -69,12 +69,18 @@ void print(int *arr, int n)
 }
 int main()
 {
-    int n = 12;
-    int arr[n] = {57, 85, 100, 2, 4, 6, 1, 9, 9, 9, 10, 25};
-    cout << "\n\t\tOriginal array" << endl;
-    print(arr, n);
-    quickSort(arr, 0, n - 1);
+    int n1 = 12, n2 = 7;
+    int arr[n1] = {57, 85, 100, 2, 4, 6, 1, 9, 9, 9, 10, 25};
+    int arr1[n2] = {10, 80, 30, 90, 40, 50, 70};
+    cout << "\n\t\tOriginal array 1" << endl;
+    print(arr, n1);
+    quickSort(arr, 0, n1 - 1);
     cout << "\n\t\tAfter Quick Sort" << endl;
-    print(arr, n);
+    print(arr, n1);
+    cout << "\n\t\tOriginal array 2" << endl;
+    print(arr1, n2);
+    quickSort(arr1, 0, n2 - 1);
+    cout << "\n\t\tAfter Quick Sort" << endl;
+    print(arr1, n2);
     return 0;
 }

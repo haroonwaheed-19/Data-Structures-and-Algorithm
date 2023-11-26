@@ -2,7 +2,7 @@
 using namespace std;
 void print(int *arr, int n)
 {
-    cout << "\nElements in the array are : ";
+    cout << "\n\tElements in the array are : ";
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
@@ -48,7 +48,7 @@ int main()
     int n = 6;
     int arr[n] = {15, 5, 98, 52, 2, 10};
     int arr1[n] = {15, 5, 98, 52, 2, 10};
-    cout << "\n\t\tOriginal array" << endl;
+    cout << "\n\t\t\tOriginal array" << endl;
     print(arr, n);
     bubbleSortAscending(arr, n);
     cout << "\n\t\tAfter bubble Sort in ascending Order" << endl;

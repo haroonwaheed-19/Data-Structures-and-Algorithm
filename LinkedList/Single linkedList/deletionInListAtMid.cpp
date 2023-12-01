@@ -37,7 +37,7 @@ public:
             delete temp;
         }
     }
-    // insertion at head or prepend function
+    // insertion at head
     void insertAtHead(int n)
     {
         // creating new Node and assigning value to them using Node class Constructor

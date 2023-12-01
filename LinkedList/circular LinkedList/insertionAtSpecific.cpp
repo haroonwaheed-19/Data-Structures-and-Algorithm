@@ -82,11 +82,6 @@ public:
                 temp = temp->next;
                 count++;
             }
-            /*if (temp->next != head)
-            {
-                cout << "\nInvalid Node so adding this in the tail" << endl;
-                insertAtTail(n);
-            }*/
             if (temp->next != head)
             {
                 newNode->next = temp->next;

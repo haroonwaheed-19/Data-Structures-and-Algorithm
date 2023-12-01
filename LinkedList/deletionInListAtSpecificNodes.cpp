@@ -164,7 +164,8 @@ public:
             Node *temp = head;
             if (pos <= 0)
             {
-                cout << "\nInvalid Position" << endl;
+                cout << "\n"
+                     << pos << " Invalid Position" << endl;
             }
             else if (pos == 1)
             {
@@ -205,7 +206,8 @@ public:
                 }
                 else
                 {
-                    cout << "\nOut of Bound Position" << endl;
+                    cout << "\n"
+                         << pos << " node is Out of Bound Position" << endl;
                 }
             }
         }
@@ -228,10 +230,22 @@ int main()
     l1.insertAtTail(60);
     cout << "\n\t\tBefore Deleting" << endl;
     l1.display();               // 10 20 30 40 50 60
-    l1.deleteAtSpecificNode(3); // 20
+    l1.deleteAtSpecificNode(1); // 20
+    l1.deleteAtSpecificNode(1); // 10
+    l1.deleteAtSpecificNode(1); // 10
+    l1.deleteAtSpecificNode(1); // 10
+    l1.deleteAtSpecificNode(1); // 10
     l1.deleteAtSpecificNode(1); // 10
     cout << "\n\t\tAfter Deleting" << endl;
     l1.display(); // 20 40 50 60
+    l1.insertAtHead(10);
+    l1.insertAtTail(20);
+    l1.insertAtTail(30);
+    l1.insertAtTail(40);
+    l1.insertAtTail(50);
+    l1.insertAtTail(60);
+    l1.display(); // 20 40 50 60
+
     cout << "\n\t\t2nd Object" << endl;
     LinkedList l2;
     l2.insertAtHead(50);

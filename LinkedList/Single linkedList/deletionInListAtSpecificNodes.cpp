@@ -207,7 +207,8 @@ public:
                 else
                 {
                     cout << "\n"
-                         << pos << " node is Out of Bound Position" << endl;
+                         << "position of this node "
+                         << pos << " is Out of Bound" << endl;
                 }
             }
         }

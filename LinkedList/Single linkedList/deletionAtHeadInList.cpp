@@ -20,7 +20,7 @@ private:
     Node *head, *tail;
 
 public:
-    // constructor
+    // constructor for list
     LinkedList()
     {
         head = NULL;

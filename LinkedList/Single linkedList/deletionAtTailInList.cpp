@@ -15,7 +15,7 @@ public:
 };
 class LinkedList
 {
-    // data members
+    // data membersfor class
 private:
     Node *head, *tail;
 

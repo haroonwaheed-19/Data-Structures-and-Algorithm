@@ -149,7 +149,7 @@ int main()
     l2.insertAtTail(30);
     l2.insertAtTail(40);
     l2.insertAtTail(50);
-    l1.display();     // 10 20 30 40 50
+    l2.display();     // 10 20 30 40 50
     l2.deleteAtMid(); // odd case it will delete 30
     cout << "\nDeletion middle Node in case of ODD Numbers of Nodes in Linked List " << endl;
     // this display function will print 10 20 40 50

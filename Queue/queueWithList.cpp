@@ -73,7 +73,14 @@ public:
         if (!isEmpty())
         {
             Node *temp = front;
-            front = front->next;
+            if (front->next != NULL)
+            {
+                front = front->next;
+            }
+            else
+            {
+                front = rear = NULL;
+            }
             delete temp;
         }
         else
@@ -135,6 +142,7 @@ int main()
     q1.Front();   // 20
     q1.enQueue(35);
     q1.enQueue(40);
-    q1.display(); // 20 30 35 40
+    q1.enQueue(45);
+    q1.display(); // 20 30 35 40 45
     return 0;
 }

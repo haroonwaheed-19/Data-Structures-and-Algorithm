@@ -11,15 +11,22 @@ int getPivot(int *arr, int s, int e, int n)
     if (arr[mid] >= arr[0])
     {
         int ans = getPivot(arr, mid + 1, e, n);
-        cout << "ans : " << arr[ans] << endl;
         return ans - 1;
     }
     else
     {
         getPivot(arr, s, mid, n);
-        cout << "mid : " << arr[mid - 1] << endl;
         return mid - 1;
     }
+}
+void printArray(int *arr, int n)
+{
+    cout << endl;
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
 }
 int main()
 {
@@ -27,6 +34,7 @@ int main()
     int s = 0, e = n - 1;
     int arr[n] = {8, 9, 10, 11, 12, 13, 16, 19, 21, 3, 4, 5, 6, 7};
     int ans = getPivot(arr, s, e, n);
+    printArray(arr, n);
     cout << "\npivot Element is at index " << ans << " and it is : " << arr[ans] << endl;
 
     return 0;

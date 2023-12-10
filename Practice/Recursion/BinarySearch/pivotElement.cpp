@@ -5,18 +5,17 @@ int getPivot(int *arr, int s, int e, int n)
     // pivot element is the element which is largest in the array and after that all elements are smaller and it is in ascending order
     if (s >= e)
     {
-        return -1;
+        // s will return the smallest element in the array so s-1 will returned the correct pivot element
+        return s - 1;
     }
     int mid = s + ((e - s) / 2);
     if (arr[mid] >= arr[0])
     {
-        int ans = getPivot(arr, mid + 1, e, n);
-        return ans - 1;
+        return getPivot(arr, mid + 1, e, n);
     }
     else
     {
-        getPivot(arr, s, mid, n);
-        return mid - 1;
+        return getPivot(arr, s, mid, n);
     }
 }
 void printArray(int *arr, int n)
